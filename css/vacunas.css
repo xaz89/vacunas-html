@@ -4,19 +4,6 @@
 @import '../fontello-375955a3/css/fontello-ie7-codes.css';
 @import '../fontello-375955a3/css/fontello-ie7.css';
 @import '../fontello-375955a3/css/fontello.css';
-div,
-header,
-main,
-aside,
-nav,
-article,
-section,
-footer,
-body {
-  border: 1px solid gray;
-  background: white;
-}
-
 body {
   height: 100vh;
   display: grid;
@@ -31,6 +18,7 @@ header {
   grid-template-columns: auto 100px;
   grid-template-rows: 65px;
   grid-template-areas: "logo buscar";
+  background: rgba(128, 128, 128, 0.1);
 }
 
 .logo {
@@ -41,10 +29,12 @@ header {
 
 .buscar {
   grid-area: buscar;
+  background: rgba(128, 128, 128, 0.1);
 }
 
 aside {
   grid-area: aside;
+  background: rgba(128, 128, 128, 0.2);
 }
 aside nav li i {
   text-align: right;
@@ -58,20 +48,21 @@ main {
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   grid-template-areas: "datos info";
+  background: rgba(0, 0, 255, 0.2);
 }
 
 .datos {
   grid-area: datos;
-  background: rgba(255, 0, 0, 0.1);
+  background: rgba(128, 128, 128, 0.3);
 }
 
 .info {
   grid-area: info;
-  background: rgba(0, 0, 255, 0.1);
+  background: rgba(128, 128, 128, 0.2);
 }
 
 .dosis-aplicacion {
-  height: 200px;
+  height: 100px;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 50% 50%;
@@ -94,6 +85,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 1px solid gray;
 }
 
 .aplicacion {
@@ -112,6 +104,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 1px solid gray;
 }
 
 .reacciones {
@@ -170,7 +163,7 @@ footer {
 
 @media (max-width: 960px) {
   body {
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
