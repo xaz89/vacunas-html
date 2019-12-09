@@ -15,7 +15,6 @@
 
 $layout-breakpoint-small: 960px;
 
-
 div,
 header,
 main,
@@ -51,8 +50,6 @@ header {
   // background: rgba($color: gray, $alpha: 0.1);
 }
 
-
-
 .logo {
   grid-area: logo;
   @include align-items-center;
@@ -72,22 +69,41 @@ aside {
   grid-area: aside;
   border: 1px solid rgba($color: gray, $alpha: 0.3);
   border-right: none;
-  
+
   // background: rgba($color: gray, $alpha: 0.2);
   nav {
-    
     li {
-     height: 60px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     border: 1px solid rgba($color: gray, $alpha: 0.3);
-     border-right: none;
-     border-top: none;
-     padding-left: 15px;
-     font-size: 16px;
+      height: auto;
+      /* padding-top: 15px;
+     padding-bottom: 15px; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: none;
+      border-top: none;
+      font-size: 16px;
+      div {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid rgba($color: gray, $alpha: 0.3);
+      }
       ul {
         display: none;
+        overflow: scroll;
+        border: none;
+        li {
+          border-bottom: 1px solid rgba($color: gray, $alpha: 0.3);
+         div {
+          margin-left: 35px;
+          border-bottom: 0;
+
+         }
+        }
       }
       small {
         margin-left: 35px;
@@ -96,8 +112,9 @@ aside {
       a {
         color: inherit;
         text-decoration: none;
+        // padding-left: 15px;
       }
-     
+
       i {
         // width: 25px;
         text-align: right;
@@ -122,12 +139,11 @@ main {
 .datos {
   grid-area: datos;
   // border: 1px solid rgba($color: gray, $alpha: 0.3);
-  
+
   // background: rgba($color: gray, $alpha: 0.3);
 
   section:not(.dosis-aplicacion) {
     @include sangria;
-    
   }
 }
 
@@ -140,67 +156,66 @@ main {
 }
 
 .dosis-aplicacion {
-    height: 100px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-        "dosis"
-        "aplicacion";
+  height: 100px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "dosis"
+    "aplicacion";
 }
 .dosis {
-    grid-area: dosis;
-    display: grid;
-    grid-template-columns: 25% repeat(5, 15%);
-    grid-template-rows: auto;
-    align-items: center;
+  grid-area: dosis;
+  display: grid;
+  grid-template-columns: 25% repeat(5, 15%);
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    div {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border: 1px solid rgba($color: gray, $alpha: 0.3);
-        border-right: none;
-        border-bottom: none;
-        &:first-child{
-        border-left: none;
-        font-weight: bold;
-        }
-        p {
-          font-weight: bold;
-        }
+    border: 1px solid rgba($color: gray, $alpha: 0.3);
+    border-right: none;
+    border-bottom: none;
+    &:first-child {
+      border-left: none;
+      font-weight: bold;
     }
-
+    p {
+      font-weight: bold;
+    }
+  }
 }
 .aplicacion {
-    grid-area: aplicacion;
-    display: grid;
-    grid-template-columns: 25% repeat(5, 15%);
-    grid-template-rows: auto;
-    align-items: center;
+  grid-area: aplicacion;
+  display: grid;
+  grid-template-columns: 25% repeat(5, 15%);
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    div {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border: 1px solid rgba($color: gray, $alpha: 0.3);
-        border-right: none;
-        &:first-child{
-        border-left: none;
-        font-weight: bold;
-        }
+    border: 1px solid rgba($color: gray, $alpha: 0.3);
+    border-right: none;
+    &:first-child {
+      border-left: none;
+      font-weight: bold;
     }
-    i {
-      font-size: 20px;
-    }
+  }
+  i {
+    font-size: 20px;
+  }
 }
 
 .reacciones {
@@ -208,89 +223,79 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  
 
   div {
-      width: 25%;
-      align-items: stretch;
-      justify-content: center;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      padding: 15px;
+    width: 25%;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
   }
 
   .circle {
-      width: 60px;
-      height:  60px;
-      background: rgba($color: gray, $alpha: 0.3);
-      border-radius: 50% 50%;
-      -webkit-border-radius: 50% 50%;
-      -moz-border-radius: 50% 50%;
-      -ms-border-radius: 50% 50%;
-      -o-border-radius: 50% 50%;
-      justify-content: center;
-      display: flex;
-      margin: auto;
-}
+    width: 60px;
+    height: 60px;
+    background: rgba($color: gray, $alpha: 0.3);
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -ms-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+  }
 }
 
 .info {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 60px 150px auto;
-    grid-template-areas:
-        "control"
-        "descripcion"
-        "animacion";
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60px 150px auto;
+  grid-template-areas:
+    "control"
+    "descripcion"
+    "animacion";
 }
 
 .control {
-    display: grid;
-    grid-template-columns: 25% auto 25%;
-    
-    // grid-template-rows: auto;
-    div {
-      border: 1px solid rgba($color: gray, $alpha: 0.3);
-      border-right: none;
-      border-top: none;
-      font-weight: bold;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 19px;
-      &:first-child{
-        border-left: none;
-        font-size: 10px;
-      }
-      &:last-child{
-        border-right: none;
-        font-size: 10px;
-      }
-    }
+  display: grid;
+  grid-template-columns: 25% auto 25%;
 
-    
+  // grid-template-rows: auto;
+  div {
+    border: 1px solid rgba($color: gray, $alpha: 0.3);
+    border-right: none;
+    border-top: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    &:first-child {
+      border-left: none;
+      font-size: 10px;
+    }
+    &:last-child {
+      border-right: none;
+      font-size: 10px;
+    }
+  }
 }
 .descripcion {
-    display: grid;
-    // grid-template-rows: 60px;
-    overflow-y: scroll;
-    @include sangria;
-    
+  display: grid;
+  // grid-template-rows: 60px;
+  overflow-y: scroll;
+  @include sangria;
 }
 
 .animacion {
-    display: grid;
-    background: rgba($color: gray, $alpha: 0.1);
-    // grid-template-rows: 150px;
+  display: grid;
+  background: rgba($color: gray, $alpha: 0.1);
+  // grid-template-rows: 150px;
 }
-
-
-
-
-
-
 
 .active {
   background: $calculadora;
@@ -310,6 +315,9 @@ footer {
   grid-area: footer;
 }
 
+.d-block {
+  display: block;
+}
 
 @media (max-width: $layout-breakpoint-small) {
   body {
@@ -329,30 +337,31 @@ footer {
     grid-template-rows: auto;
     grid-template-areas:
       "datos"
-      "info",
+      "info";
   }
 
   nav {
-    ul{
+    ul {
       display: flex;
-      li{
+      li {
         height: 85px;
         width: calc(100% / 6);
         text-align: center;
         display: flex;
-    align-items: center;
-    border: 1px solid gray;
-    justify-content: center;
-    i {
-      font-size: 25px;
-    }
-        span, small {
+        align-items: center;
+        border: 1px solid gray;
+        justify-content: center;
+        i {
+          font-size: 25px;
+        }
+        span,
+        small {
           display: none;
         }
       }
     }
   }
- 
+
   aside {
     height: 85px;
   }

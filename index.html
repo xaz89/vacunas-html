@@ -17,35 +17,51 @@
     <aside>
         <nav>
             <ul>
-                <li><a href=""><i class="demo-icon icon-calculadora"></i><span>Calculadora</span></a></li>
                 <li>
-                    <a href="#"><i class="demo-icon icon-ninios"></i> <span>Niños</span></a>
-                    <small>0 a 9 años de edad</small>
-                    <ul>
+                    <div><a href=""><i class="demo-icon icon-calculadora"></i><span>Calculadora</span></a></div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#" onclick="myFunction()"><i class="demo-icon icon-ninios"></i> <span>Niños</span></a>
+                        <small>0 a 9 años de edad</small>
+                    </div>
+                    <ul id="myDIV">
                         <li>
-                            <a href="">BCG</a>
+                            <div><a href="">BCG</a></div>
+                        </li>
                         <li>
-                            <a href="">BCG</a>
+                            <div><a href="">BCG</a></div>
+                        </li>
                         <li>
-                            <a href="">BCG</a>
+                            <div><a href="">BCG</a></div>
                         </li>
                     </ul>
+
                 </li>
                 <li>
-                    <a href="#"><i class="demo-icon icon-adolescentes"></i><span> Adolescentes</span></a>
-                    <small>0 a 9 años de edad</small>
+                    <div>
+                        <a href="#"><i class="demo-icon icon-adolescentes"></i><span> Adolescentes</span></a>
+                        <small>0 a 9 años de edad</small>
+                    </div>
+
                 </li>
                 <li>
-                    <a href="#"><i class="demo-icon icon-mujeres"></i><span> Mujeres</span></a>
-                    <small>0 a 9 años de edad</small>
+                    <div>
+                        <a href="#"><i class="demo-icon icon-mujeres"></i><span> Mujeres</span></a>
+                        <small>0 a 9 años de edad</small>
+                    </div>
                 </li>
                 <li>
-                    <a href="#"><i class="demo-icon icon-hombres"></i><span> Hombres</span></a>
-                    <small>0 a 9 años de edad</small>
+                    <div>
+                        <a href="#"><i class="demo-icon icon-hombres"></i><span> Hombres</span></a>
+                        <small>0 a 9 años de edad</small>
+                    </div>
                 </li>
                 <li>
-                    <a href="#"><i class="demo-icon icon-viejitos"></i><span> Adultos mayores</span></a>
-                    <small>0 a 9 años de edad</small>
+                    <div>
+                        <a href="#"><i class="demo-icon icon-viejitos"></i><span> Adultos mayores</span></a>
+                        <small>0 a 9 años de edad</small>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -137,7 +153,6 @@
                     <div>
                         <div class="circle"></div> Mareos
                     </div>
-
                 </div>
             </section>
         </article>
@@ -162,6 +177,13 @@
         </article>
     </main>
     <footer></footer>
+
+    <script>
+    function myFunction() {
+   var element = document.getElementById("myDIV");
+   element.classList.toggle("d-block");
+}
+</script>
 
 </body>
 
